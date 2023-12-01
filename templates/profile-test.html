@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mes informations</title>
+    <link rel="stylesheet" href='/static/css/main.css' />
+    <link rel="stylesheet" href='/static/css/form.css' />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/container.css') }}">
 </head>
+
 <body>
-    <form method="POST" action="profile">
-        <input value={{ user.username }} name="username" />
-        <button type="submit">Editer</button>
-    </form>
+    {% include 'header.html' %}
+    <div class="container">
+        <h1 class="mb-2">Mes infos</h1>
+        <form method="POST" action="profile">
+
+            <div class="input-label mb-2">
+                <label class="ft-label" for="username">Nom d'utilisateur</label>
+                <input type="text" name="username" id="username" value={{ user.username }} />
+            </div>
+
+            <button class="mb-1" type="submit">Valider les changements</button>
+            <button class="button--secondary">Se déconnecter</button>
+
+        </form>
+    </div>
 </body>
+
 </html>
