@@ -30,6 +30,11 @@ a {
     text-decoration: initial;
 }
 
+img {
+    width: 16px;
+    height: 16px;
+}
+
 .ft-label {
     text-transform: uppercase;
 }
@@ -77,6 +82,12 @@ button:hover {
     border: 1px solid #5A6725;
     color: #5A6725;
     background-color: unset;
+}
+
+.button--icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 input {
