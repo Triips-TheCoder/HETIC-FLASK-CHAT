@@ -12,15 +12,19 @@
     </div>
     
 
+    {% if current_user.is_authenticated %}
     <form method="POST" action="messages" class="input-container">
         <input placeholder="Que veux-tu dire ?" class="input-text" name="message" />
         <button type="submit" class="button--icon">
             Envoyer
-            <img src="static/icon/send.svg" />
+            <img src="{{ url_for('static', filename='icon/send.svg') }}" />
         </button>
     </form>
-    <!-- <div class="input-container-lock">
-        <object data="{{ url_for('static', filename='icon/lock.svg') }}" type="image/svg+xml" class="lock-icon"></object>
-        <p>Il faut s'inscrire pour envoyer un message</p>
-    </div> -->
+    {% else %}
+        <div class="input-container-lock">
+            <object data="{{ url_for('static', filename='icon/lock.svg') }}" type="image/svg+xml" class="lock-icon"></object>
+            <p>Il faut s'inscrire pour envoyer un message</p>
+        </div>
+    {% endif %}
+
 </div>
