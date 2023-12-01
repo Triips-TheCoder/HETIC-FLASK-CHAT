@@ -98,7 +98,7 @@ img:hover {
 }
 
 .button, button {
-    font-family: initial;
+    font-family: Roboto Mono;
     border: initial;
     font-size: 12px;
     background-color: #5A6725;
@@ -132,7 +132,7 @@ img:hover {
 input {
     outline: initial;
     border: initial;
-    font-family: initial;
+    font-family: Roboto Mono;
     padding: 8px;
     border-radius: 4px;
     font-size: 12px;
