@@ -63,7 +63,7 @@ img:hover {
     gap: 8px;
 }
 
-.f-2-buttons button {
+.f-2-buttons button, .f-2-buttons a {
     width: 50%;
 }
 
