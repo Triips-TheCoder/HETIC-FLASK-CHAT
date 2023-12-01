@@ -2,4 +2,6 @@ form {
     background-color: #BED754;
     padding: 16px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
 }

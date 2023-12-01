@@ -16,10 +16,26 @@
     <div class="container">
         <h1 class="mb-2">Inscription</h1>
         <form method="POST" action="/signup">
-            <input type="email" name="email" placeholder="Email" autofocus>
-            <input type="text" name="username" placeholder="Nom d'utilisateur" autofocus="">
-            <input class="input is-large" type="password" name="password" placeholder="Password">
-            <button>S'inscrire</button>
+            <div class="input-label mb-2">
+                <label class="ft-label" for="username">Nom d'utilisateur</label>
+                <input type="text" name="username" id="username" placeholder="Votre nom d'utilisateur" />
+            </div>
+
+            <div class="input-label mb-2">
+                <label class="ft-label" for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Votre addresse e-mail..." />
+            </div>
+
+            <div class="input-label mb-3">
+                <label class="ft-label" for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" placeholder="Un mot de passe robuste..." />
+            </div>
+
+            <div class="f f-column">
+                <button class="mb-1">S'inscrire</button>
+                <button class="button--secondary">J’ai déjà un compte</button>
+            </div>
+
         </form>
     </div>
 
