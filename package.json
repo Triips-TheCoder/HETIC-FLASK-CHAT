@@ -1,0 +1,7 @@
+{
+  "name": "HETIC FLASK CHAT WEB",
+  "version": "0.1.0",
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  }
+}

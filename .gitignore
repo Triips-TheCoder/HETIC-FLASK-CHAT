@@ -1,5 +1,9 @@
+# Env files
 ./venv
+.env
 
 #Jetbrains IDE
 .idea/
-.env
+
+# Node Packages
+node_modules
