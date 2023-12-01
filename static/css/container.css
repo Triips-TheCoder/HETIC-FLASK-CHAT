@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+}
+
+.conversation-box {
+    background-color: #BED754;
+    width: 33vw;
+    height: 300px; 
+    max-width: 548px;
+    overflow-y: auto; 
+    border-radius: 8px;
+    padding: 10px;
+    scrollbar-width: none; /* Cacher la scrollbar sur Firefox */
+}
+
+.conversation-box::-webkit-scrollbar {
+    display: none; /* Cacher la scrollbar sur Chrome & Safari */
+}
+
+

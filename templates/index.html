@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/message.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/container.css') }}">
+
     <title>Chat Flask HETIC</title>
 </head>
 
@@ -19,12 +21,8 @@
     <p class="ft-label">Je suis un label</p>
     <p class="ft-primary">Je suis un paragraphe principal</p>
 
-    {% set author = 'John Doe' %}
-    {% set date = '01/12/2023 14:00' %}
-    {% set body = 'Ceci est un message de test.' %}
-
-    {% include 'message.html' %}
-
+    {% include 'conversation.html' %}
+    
     <p class="ft-link">Je suis un lien</p>
     <p class="ft-link ft-link--active">Je suis un lien actif</p>
 
