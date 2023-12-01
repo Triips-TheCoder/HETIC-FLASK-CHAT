@@ -1,7 +1,6 @@
 .container {
     display: flex;
     justify-content: center; 
-    align-items: center; 
     margin: 0;
 }
 
@@ -10,21 +9,22 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #BED754;
-    width: 33vw;
+    width: 100%;
     height: 60vh; 
-    max-width: 548px;
+    overflow-y: auto; 
     border-radius: 8px;
-    padding: 10px;
+    padding: 16px;
+    scrollbar-width: none; /* Cacher la scrollbar sur Firefox */
+}
+
+.messages-container::-webkit-scrollbar {
+    display: none; /* Cacher la scrollbar sur Chrome & Safari */
 }
 
 .messages-container {
     overflow-y: auto;
     flex-grow: 1;
     scrollbar-width: none; /* Cacher la scrollbar sur Mozilla */
-}
-
-.messages-container::-webkit-scrollbar {
-    display: none; /* Cacher la scrollbar sur Chrome & Safari */
 }
 
 .input-container {
@@ -37,3 +37,5 @@
     width: 100%;
     margin-right: 8px;
 }
+
+

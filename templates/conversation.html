@@ -1,25 +1,19 @@
-<div class="container">
-    <div class="container">
-        <div class="conversation-box">
-            <div class="messages-container">
-                {% set author = 'John Doe' %}
-                {% set date = '01/12/2023 14:00' %}
-                {% set body = 'Ceci est un message de test.' %}
-                
-                {% include 'message.html' %}
-                {% include 'message.html' %}
-                {% include 'message.html' %}
-                {% include 'message.html' %}
-            </div>
-    
-            <div class="input-container">
-                <input placeholder="Que veux-tu dire ?" class="input-text"/>
-                <button class="button--icon">
-                    Envoyer
-                    <img src="static/icon/send.svg" />
-                </button>
-            </div>
-        </div>
+<div class="conversation-box">
+    <div class="messages-container">
+    {% set author = 'John Doe' %}
+    {% set date = '01/12/2023 14:00' %}
+    {% set body = 'Ceci est un message de test.' %}
+
+    {% include 'message.html' %}
+    {% include 'message.html' %}
+    {% include 'message.html' %}
+    {% include 'message.html' %}
     </div>
-    
+</div>
+<div class="input-container">
+    <input placeholder="Que veux-tu dire ?" class="input-text"/>
+    <button class="button--icon">
+        Envoyer
+        <img src="static/icon/send.svg" />
+    </button>
 </div>

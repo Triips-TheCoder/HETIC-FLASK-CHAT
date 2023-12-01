@@ -25,6 +25,9 @@ with app.app_context():
 def index():
     return render_template('index.html')
 
+@app.route('/gui')
+def gui():
+    return render_template('gui.html')
 
 @app.route('/api')
 def hello_world():  # put application's code here
