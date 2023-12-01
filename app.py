@@ -26,7 +26,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/gui')
-def index():
+def gui():
     return render_template('gui.html')
 
 @app.route('/api')
