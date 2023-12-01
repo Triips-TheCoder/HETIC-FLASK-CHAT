@@ -5,7 +5,7 @@
     max-width: 66%;
 }
 
-.message:last-of-type {
+.message:first-of-type {
     margin-bottom: 0;
 }
 
