@@ -1,21 +1,11 @@
-.container {
-    display: flex;
-    justify-content: center; 
-    margin: 0 33vw;
-    flex-direction: column;
-}
-
 .conversation-box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #BED754;
-    width: 100%;
     height: 60vh; 
-    overflow-y: auto; 
     border-radius: 8px;
     padding: 16px;
-    scrollbar-width: none; /* Cacher la scrollbar sur Firefox */
 }
 
 .messages-container::-webkit-scrollbar {
@@ -23,7 +13,10 @@
 }
 
 .messages-container {
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    overflow: scroll;
     flex-grow: 1;
     scrollbar-width: none; /* Cacher la scrollbar sur Mozilla */
 }
@@ -32,6 +25,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 16px;
 }
 
 .input-text {
