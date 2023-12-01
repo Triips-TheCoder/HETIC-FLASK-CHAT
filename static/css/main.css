@@ -41,6 +41,7 @@ img {
 
 .ft-label {
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .ft-primary {
