@@ -1,10 +1,12 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+
 from db import SQLALCHEMY_DATABASE_URI
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 db = SQLAlchemy(app)
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -14,16 +16,20 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
+
 with app.app_context():
     db.create_all()
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
 @app.route('/api')
 def hello_world():  # put application's code here
     return 'Hello World!'
 
-if __name__=='__main__':
-    app.run(debug = True)
+
+if __name__ == '__main__':
+    app.run(debug=True)
