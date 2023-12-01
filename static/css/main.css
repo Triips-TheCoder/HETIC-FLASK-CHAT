@@ -54,3 +54,7 @@ a {
 .ft-link--active:hover {
     opacity: unset;
 }
+
+.c-green {
+    color: #5A6725;
+}
