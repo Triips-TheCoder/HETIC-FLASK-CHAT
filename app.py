@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, current_user, logout_user, LoginManager
 from config.db import SQLALCHEMY_DATABASE_URI
 import os
+import sqlalchemy
 
 
 app = Flask(__name__)
@@ -31,7 +32,12 @@ with app.app_context():
 
 @app.route('/')
 def index():
-    messages = db.session.query(Message, User).join(User, Message.user_id == User.id).all()
+    desc_expression = sqlalchemy.sql.expression.desc(Message.created_at)
+    messages = db.session.query(Message, User).order_by(desc_expression).join(User, Message.user_id == User.id).all()
+
+    for message in messages:
+        message.Message.created_at = message.Message.created_at.strftime("%d/%m/%Y %H:%M:%S")
+
     return render_template("index.html", messages=messages, user_id=current_user.id if current_user.is_authenticated else None)
 
 @app.route("/signup", methods=["GET"])
