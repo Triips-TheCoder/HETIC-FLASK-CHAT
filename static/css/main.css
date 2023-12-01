@@ -31,8 +31,8 @@ a {
 }
 
 img {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
 }
 
 .mb-2 {
@@ -80,6 +80,11 @@ button {
 
 button:hover {
     opacity: .75;
+}
+
+button img {
+    height: 16px;
+    width: 16px;
 }
 
 .button--secondary {
