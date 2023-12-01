@@ -2,3 +2,4 @@
 
 #Jetbrains IDE
 .idea/
+.env
