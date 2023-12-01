@@ -2,9 +2,12 @@
 <header>
     <img src="{{ url_for('static', filename='icon/logo.svg') }}" alt="Logo">
     <nav>
-        <a class="ft-link ft-link--active:hover ft-link--active" href="{{ url_for('index') }}">Chat</a>
-        <a class="ft-link ft-link--active:hover" href="{{ url_for('signup') }}">M'inscrire</a>
-        <!-- Autres liens de navigation -->
+        <a class="ft-link {{ 'ft-link--active' if current_path == url_for('index') }}" href="{{ url_for('index') }}">Chat</a>
+        <a class="ft-link {{ 'ft-link--active' if current_path == url_for('signup') }}" href="{{ url_for('signup') }}">M'inscrire</a>
     </nav>
-    <img src="{{ url_for('static', filename='icon/log-in.svg') }}" alt="Log In">
+    {% if current_user.is_authenticated %}
+        <img src="{{ url_for('static', filename='icon/log-out.svg') }}" alt="Log Out">
+    {% else %}
+        <img src="{{ url_for('static', filename='icon/log-in.svg') }}" alt="Log In">
+    {% endif %}
 </header>

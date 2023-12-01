@@ -13,3 +13,7 @@ git clone https://github.com/MisterAzix/hetic-saline-royale-academy
 ```bash
 pip3 install flask
 ```
+
+## Database diagram
+
+![Database diagram](./static/images/diagram.png)
