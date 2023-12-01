@@ -4,7 +4,11 @@
     max-width: 66%;
 }
 
-.message-content{
+.message:last-of-type {
+    margin-bottom: 0;
+}
+
+.message-content {
     background-color: white;
     border-radius: 4px;
     padding: 8px;
