@@ -14,7 +14,7 @@
 <body>
     {% include 'header.html' %}
     <div class="container">
-        <h1>Connexion</h1>
+        <h1 class="mb-2">Connexion</h1>
         <form method="POST" action="/signin">
 
             <div class="input-label mb-2">
@@ -28,9 +28,12 @@
             </div>
 
             <div class="f f-column">
-                <button class="mb-1">Se connecter</button>
+                <button class="button--icon mb-1">
+                    Se connecter
+                    <img src="static/icon/log-in-white.svg" />
+                </button>
                 <div class="f f-2-buttons">
-                    <button class="button--secondary">Je n'ai pas encore de compte</button>
+                    <a class="button button--secondary" href="{{ url_for('signup') }}">Je n'ai pas encore de compte</a>
                     <button class="button--secondary">Mot de passe oublié</button>
                 </div>
             </div>
