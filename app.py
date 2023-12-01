@@ -31,7 +31,8 @@ with app.app_context():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    messages = db.session.query(Message, User).join(User, Message.user_id == User.id).all()
+    return render_template("index.html", messages=messages, user_id=current_user.id if current_user.is_authenticated else None)
 
 @app.route("/signup", methods=["GET"])
 def signup():
@@ -96,12 +97,7 @@ def messages_post():
     new_message = Message(message=message, user_id=user_id)
     db.session.add(new_message)
     db.session.commit()
-    return redirect(url_for("messages"))
-
-@app.route("/messages", methods=["GET"])
-def messages():
-    messages = db.session.query(Message, User).join(User, Message.user_id == User.id).all()
-    return render_template("messages-test.html", messages=messages)
+    return redirect(url_for("index"))
 
 @app.route("/profile", methods=["GET"])
 @login_required
