@@ -105,6 +105,10 @@ def messages():
     messages = db.session.query(Message, User).join(User, Message.user_id == User.id).all()
     return render_template("messages-test.html", messages=messages)
 
+@app.route('/gui')
+def gui():
+    return render_template('gui.html')
+
 
 
 if __name__ == '__main__':

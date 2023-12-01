@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+body {
+    background-color: #191919;
+    color: white;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+p {
+    margin: 0;
+    font-size: 12px;
+}
+
+a {
+    color: initial;
+    text-decoration: initial;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}
+
+.mb-2 {
+    margin-bottom: 16px;
+}
+
+.ft-label {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.ft-primary {
+    font-size: 14px;
+}
+
+.ft-link {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.ft-link:hover {
+    opacity: .75;
+}
+
+.ft-link--active {
+    text-decoration: underline;
+}
+
+.ft-link--active:hover {
+    opacity: unset;
+}
+
+.c-green {
+    color: #5A6725;
+}
+
+button {
+    font-family: initial;
+    border: initial;
+    font-size: 12px;
+    background-color: #5A6725;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+button:hover {
+    opacity: .75;
+}
+
+button img {
+    height: 16px;
+    width: 16px;
+}
+
+.button--secondary {
+    border: 1px solid #5A6725;
+    color: #5A6725;
+    background-color: unset;
+}
+
+.button--icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input {
+    outline: initial;
+    border: initial;
+    font-family: initial;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: black;
+    opacity: .5;
+}

@@ -1,0 +1,16 @@
+header {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px;
+    align-items: center;
+    margin: 16px;
+    margin-bottom: 64px;
+    border-radius: 8px;
+}
+
+header nav {
+    display: flex;
+    gap: 32px;
+}

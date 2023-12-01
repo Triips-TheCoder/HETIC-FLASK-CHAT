@@ -1,0 +1,18 @@
+.message {
+    margin-bottom: 15px;
+    max-width: 66%;
+}
+
+.message-content{
+    background-color: #f4f4f8;
+    border-radius: 4px;
+    padding: 10px;
+    color: #191919;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    align-items: baseline;
+}
