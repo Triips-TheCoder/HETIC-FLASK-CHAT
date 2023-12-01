@@ -35,6 +35,10 @@ img {
     height: 24px;
 }
 
+img:hover {
+    opacity: .75;
+}
+
 .mb-2 {
     margin-bottom: 16px;
 }
@@ -106,6 +110,7 @@ input {
     font-family: initial;
     padding: 8px;
     border-radius: 4px;
+    font-size: 12px;
 }
 
 input::placeholder {
