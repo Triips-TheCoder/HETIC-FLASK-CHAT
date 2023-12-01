@@ -19,9 +19,8 @@ pip3 install flask
 ![Database diagram](./static/images/diagram.png)
 
 # Conception des principaux écrans 
-[Lien vers la maquette sur Figma](https://www.figma.com/file/K9RacqLDIlGkf9KkwGNCVA/Chat-Flask?type=design&node-id=0%3A1&mode=design&t=uRG0g7swFtZQwXeR-1)
 
-![Database diagram](./static/images/diagram.png)
+[Lien vers la maquette sur Figma](https://www.figma.com/file/K9RacqLDIlGkf9KkwGNCVA/Chat-Flask?type=design&node-id=0%3A1&mode=design&t=uRG0g7swFtZQwXeR-1)
 
 # Planning & Répartition du travail
 
