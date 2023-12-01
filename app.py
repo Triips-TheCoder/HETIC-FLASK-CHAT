@@ -31,9 +31,8 @@ with app.app_context():
 
 
 @app.route('/')
-@login_required
 def index():
-    return render_template('index.html', username=current_user.username)
+    return render_template('index.html')
 
 @app.route("/signup", methods=["GET"])
 def signup():
