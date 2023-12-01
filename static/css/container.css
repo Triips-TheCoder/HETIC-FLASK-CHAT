@@ -20,4 +20,10 @@
     display: none; /* Cacher la scrollbar sur Chrome & Safari */
 }
 
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
