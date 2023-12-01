@@ -78,3 +78,16 @@ button:hover {
     color: #5A6725;
     background-color: unset;
 }
+
+input {
+    outline: initial;
+    border: initial;
+    font-family: initial;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: black;
+    opacity: .5;
+}
