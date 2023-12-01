@@ -55,6 +55,10 @@ img:hover {
     display: flex;
 }
 
+.f-ai-center {
+    align-items: center;
+}
+
 .f-column {
     flex-direction: column;
 }
