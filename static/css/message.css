@@ -24,4 +24,6 @@
 
 .message-sent {
     margin-left: auto;
+    min-width: 66%;
+    
 }

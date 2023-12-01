@@ -1,7 +1,7 @@
 <!-- templates/message.html -->
-<div class="message">
+<div class="message {{ 'message-sent' if is_author == True  }} ">
     <div class="message-header ft-label">
-        <p class="c-green">{{ author }}</p>
+        <p class="c-green">{{ author }}&nbsp;</p>
         <p>{{ date }}</p>
     </div>
     <div class="message-content ft-principal">
