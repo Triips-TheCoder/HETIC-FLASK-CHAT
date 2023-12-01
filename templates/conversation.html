@@ -1,14 +1,32 @@
 <div class="conversation-box">
     <div class="messages-container">
-        {% set author = 'John Doe' %}
-        {% set date = '01/12/2023 14:00' %}
-        {% set body = 'Ceci est un message de test.' %}
-
-        {% include 'message.html' %}
-        {% include 'message.html' %}
-        {% include 'message.html' %}
-        {% include 'message.html' %}
+        {% set messages = [
+            {'author': 'John Doe', 'date': '01/12/2023 14:00', 'body': 'premier.'},
+            {'author': 'Jane Doe', 'date': '01/12/2023 14:05', 'body': 'Un autre message.'},
+            {'author': 'John Doe', 'date': '01/12/2023 14:00', 'body': 'Ceci est un message de test.'},
+            {'author': 'Jane Doe', 'date': '01/12/2023 14:05', 'body': 'Un autre message.'},
+            {'author': 'John Doe', 'date': '01/12/2023 14:00', 'body': 'Ceci est un message de test.'},
+            {'author': 'Jane Doe', 'date': '01/12/2023 14:05', 'body': 'Un autre message.'},
+            {'author': 'John Doe', 'date': '01/12/2023 14:00', 'body': 'Ceci est un message de test.'},
+            {'author': 'Jane Doe', 'date': '01/12/2023 14:05', 'body': 'Un autre message.'},
+            {'author': 'Jane Doe', 'date': '01/12/2023 14:05', 'body': 'Dernier.'},
+            {'author': 'Jane Doe', 'date': '01/12/2023 14:05', 'body': 'AHHHH.'},
+            {'author': 'Jane Doe', 'date': '01/12/2023 14:05', 'body': 'JJJJJJ.'},
+        ] %}
+    
+        {% for message in messages %}
+            <div class="message">
+                <div class="message-header ft-label">
+                    <p class="c-green">{{ message.author }}</p>
+                    <p>{{ message.date }}</p>
+                </div>
+                <div class="message-content ft-principal">
+                    {{ message.body }}
+                </div>
+            </div>
+        {% endfor %}
     </div>
+    
 
     <div class="input-container">
         <input placeholder="Que veux-tu dire ?" class="input-text" />
