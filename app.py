@@ -123,7 +123,9 @@ def profile_patch():
 def gui():
     return render_template('gui.html')
 
-
+@app.context_processor
+def inject_path():
+    return dict(current_path=request.path)
 
 if __name__ == '__main__':
     app.run(debug=True)
