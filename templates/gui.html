@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href='/static/css/main.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/message.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/container.css') }}">
+
+    <title>GUI</title>
+</head>
+
+<body>
+    <h1>Titre principal</h1>
+    <h2>Titre secondaire</h2>
+
+    <p class="ft-primary">Je suis un paragraphe principal</p>
+    <p>Je suis un paragraphe</p>
+    <p class="ft-label">Je suis un label</p>
+    <p class="ft-primary">Je suis un paragraphe principal</p>
+    <p class="ft-link">Je suis un lien</p>
+    <p class="ft-link ft-link--active">Je suis un lien actif</p>
+
+    <button>Je suis un bouton</button>
+    <button class="button--secondary">Je suis un bouton secondaire</button>
+    <button class="button--icon">
+        Je suis un bouton avec une icon
+        <img src="static/icon/send.svg" />
+    </button>
+
+    <input placeholder="Je suis le placeholder" />
+</body>
+
+</html>
