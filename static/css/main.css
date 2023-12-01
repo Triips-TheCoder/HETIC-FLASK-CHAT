@@ -59,6 +59,14 @@ img:hover {
     flex-direction: column;
 }
 
+.f-2-buttons {
+    gap: 8px;
+}
+
+.f-2-buttons button {
+    width: 50%;
+}
+
 .ft-label {
     text-transform: uppercase;
     font-weight: 500;
@@ -89,7 +97,7 @@ img:hover {
     color: #5A6725;
 }
 
-button {
+.button, button {
     font-family: initial;
     border: initial;
     font-size: 12px;
@@ -97,13 +105,14 @@ button {
     color: white;
     padding: 8px 16px;
     border-radius: 4px;
+    text-align: center;
 }
 
-button:hover {
+.button:hover, button:hover {
     opacity: .75;
 }
 
-button img {
+.button img, button img {
     height: 16px;
     width: 16px;
 }
