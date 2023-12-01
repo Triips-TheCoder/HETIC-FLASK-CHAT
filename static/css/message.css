@@ -2,14 +2,13 @@
     background-color: #f4f4f8;
     border-radius: 4px;
     padding: 10px;
-    color: #5A6725;
+    color: #191919;
 }
 
 .message-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 4px;
-    color: #5A6725;
 }
 
 .message-author {
