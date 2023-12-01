@@ -1,36 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inscription</title>
+    <link rel="stylesheet" href='/static/css/main.css' />
+    <link rel="stylesheet" href='/static/css/form.css' />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/container.css') }}">
 </head>
+
 <body>
-    <div class="column is-4 is-offset-4">
-        <h3 class="title">Sign Up</h3>
-        <div class="box">
-            <form method="POST" action="/signup">
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
-                    </div>
-                </div>
-    
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-large" type="text" name="username" placeholder="Nom d'utilisateur" autofocus="">
-                    </div>
-                </div>
-    
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-large" type="password" name="password" placeholder="Password">
-                    </div>
-                </div>
-    
-                <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
-            </form>
-        </div>
+    {% include 'header.html' %}
+    <div class="container">
+        <h1 class="mb-2">Inscription</h1>
+        <form method="POST" action="/signup">
+            <input type="email" name="email" placeholder="Email" autofocus>
+            <input type="text" name="username" placeholder="Nom d'utilisateur" autofocus="">
+            <input class="input is-large" type="password" name="password" placeholder="Password">
+            <button>S'inscrire</button>
+        </form>
     </div>
+
 </body>
+
 </html>
