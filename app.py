@@ -1,9 +1,10 @@
 from flask import Flask, render_template, redirect, url_for, request
 from models.models import db, User, Message
-from db import SQLALCHEMY_DATABASE_URI
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import LoginManager, login_user, login_required, current_user, logout_user
+from flask_login import login_user, login_required, current_user, logout_user, LoginManager
+from config.db import SQLALCHEMY_DATABASE_URI
 import os
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
@@ -12,13 +13,12 @@ app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
     "pool_pre_ping": True, 
     "pool_recycle": 300,
 }
+
 db.init_app(app)
 
 login_manager = LoginManager()
-login_manager.login_view = 'signin'
+login_manager.login_view = '../signin'
 login_manager.init_app(app)
-
-from models.models import User
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -28,7 +28,6 @@ def load_user(user_id):
 
 with app.app_context():
     db.create_all()
-
 
 @app.route('/')
 def index():
@@ -103,6 +102,22 @@ def messages_post():
 def messages():
     messages = db.session.query(Message, User).join(User, Message.user_id == User.id).all()
     return render_template("messages-test.html", messages=messages)
+
+@app.route("/profile", methods=["GET"])
+@login_required
+def profile():
+    return render_template("profile-test.html", user=current_user)
+
+@app.route("/profile", methods=["POST"])
+@login_required
+def profile_patch():
+    username = request.form.get('username')
+
+    user = User.query.filter_by(email=current_user.email).first()
+    user.username = username
+
+    db.session.commit() 
+    return render_template("profile-test.html", user=current_user)
 
 @app.route('/gui')
 def gui():
