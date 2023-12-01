@@ -1,19 +1,18 @@
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center; 
-    align-items: center; 
-    margin: 0;
+    margin: 0 33vw;
 }
 
 .conversation-box {
     background-color: #BED754;
-    width: 33vw;
-    height: 300px; 
-    max-width: 548px;
+    height: 60vh;
     overflow-y: auto; 
     border-radius: 8px;
-    padding: 10px;
+    padding: 16px;
     scrollbar-width: none; /* Cacher la scrollbar sur Firefox */
+    width: 100%;
 }
 
 .conversation-box::-webkit-scrollbar {
