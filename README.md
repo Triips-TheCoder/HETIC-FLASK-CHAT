@@ -1,5 +1,7 @@
 # HETIC CHAT APP ON FLASK 🌶️
 
+[Lien vers la production](https://hetic-flask-chat.vercel.app)
+
 ### ⚙️ Installation ⚙️
 
 1. Clone the repository to your local machine:
